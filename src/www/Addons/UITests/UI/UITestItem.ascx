@@ -1,0 +1,2 @@
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UITestItem.ascx.cs" Inherits="N2.Addons.UITests.UI.UITestItem" %>
+[<asp:Button Text="UI Test Item" runat="server" OnCommand="OnButtonCommand" />]
