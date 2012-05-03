@@ -1,0 +1,20 @@
+* Site goals
+Present (what it is), direct (to download), explain (how to use it), offer services
+
+* Design goals
+Light, "technical"
+
+* Content
+This will evolve. Proposals have many good ideas (too many, needs to be less). 
+Focus to begin with is to get something up and documenatation.
+
+* Features & priority
+1. Nice layout
+2. Start page
+3. Nice article page w. tagging
+4. Easy to write documenatation. Easy how? (markdown+github = import/export or git integration)
+5. Showcase/blog
+6. Nice download page
+7. Feature comparison template
+8. Mobile version
+9. Codeplex forum integration
