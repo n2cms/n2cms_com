@@ -26,9 +26,9 @@ Focus is presentation of the CMS, download, documentation. Proposals have many g
 ![startpage](https://github.com/n2cms/n2cms_com/raw/master/proj/test1.png)
 ![subpage with documenatation](https://github.com/n2cms/n2cms_com/raw/master/proj/test1_subpage.png)
 
-![startpage wireframe](https://github.com/n2cms/n2cms_com/raw/master/proj/test2.png)
+![startpage wireframe](https://github.com/n2cms/n2cms_com/raw/master/proj/test2.PNG)
 
-![startpage](https://github.com/n2cms/n2cms_com/raw/master/proj/test3.png)
+![startpage](https://github.com/n2cms/n2cms_com/raw/master/proj/test3c.png)
 ![startpage introductory menu](https://github.com/n2cms/n2cms_com/raw/master/proj/test3c_pathtosuccess.png)
 ![startpage community menu](https://github.com/n2cms/n2cms_com/raw/master/proj/test3c_community.png)
 ![startpage search](https://github.com/n2cms/n2cms_com/raw/master/proj/test3c_search.png)
