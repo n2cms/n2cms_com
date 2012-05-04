@@ -23,12 +23,12 @@ Focus is presentation of the CMS, download, documentation. Proposals have many g
 
 ## Layout spikes ##
 
-![](./test1.png)
-![](./test1_subpage.png)
+![startpage](https://github.com/n2cms/n2cms_com/raw/master/proj/test1.png)
+![subpage with documenatation](https://github.com/n2cms/n2cms_com/raw/master/proj/test1_subpage.png)
 
-![](./test2.png)
+![startpage wireframe](https://github.com/n2cms/n2cms_com/raw/master/proj/test2.png)
 
-![](./test3c.png)
-![](./test3c_pathtosuccess.png)
-![](./test3c_community.png)
-![](./test3c_search.png)
+![startpage](https://github.com/n2cms/n2cms_com/raw/master/proj/test3.png)
+![startpage introductory menu](https://github.com/n2cms/n2cms_com/raw/master/proj/test3c_pathtosuccess.png)
+![startpage community menu](https://github.com/n2cms/n2cms_com/raw/master/proj/test3c_community.png)
+![startpage search](https://github.com/n2cms/n2cms_com/raw/master/proj/test3c_search.png)
