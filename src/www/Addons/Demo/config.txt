@@ -1,3 +1,0 @@
-﻿		<components>
-			<add service="N2.Edit.FileSystem.IFileSystem, N2" implementation="Demo.DemoFileSystem, Demo" />
-		</components>
