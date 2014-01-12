@@ -29,7 +29,7 @@ namespace Dinamico.Models
 
 		[DataType(DataType.Password)]
 		[Display(Name = "Confirm new password")]
-		[Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+		[System.Web.Mvc.Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
 		public string ConfirmPassword { get; set; }
 	}
 
@@ -68,7 +68,7 @@ namespace Dinamico.Models
 
 		[DataType(DataType.Password)]
 		[Display(Name = "Confirm password")]
-		[Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+		[System.Web.Mvc.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
 		public string ConfirmPassword { get; set; }
 	}
 	#endregion
@@ -159,6 +159,7 @@ namespace Dinamico.Models
 	{
 		void SignIn(string userName, bool createPersistentCookie);
 		void SignOut();
+		void SignOut(string returnUrl);
 	}
 
 	[Service(typeof(IFormsAuthenticationService))]
@@ -174,6 +175,12 @@ namespace Dinamico.Models
 		public void SignOut()
 		{
 			FormsAuthentication.SignOut();
+		}
+
+		public void SignOut(string returnUrl)
+		{
+			FormsAuthentication.SignOut();
+			HttpContext.Current.Response.Redirect(returnUrl);
 		}
 	}
 	#endregion
