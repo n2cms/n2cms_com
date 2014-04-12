@@ -22,6 +22,10 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,8 +63,13 @@
     <Reference Include="Lucene.Net">
       <HintPath>..\packages\Lucene.2.9.2.2\lib\Lucene.Net.dll</HintPath>
     </Reference>
-    <Reference Include="N2">
-      <HintPath>..\packages\N2CMS.Library.2.3.0.1\lib\N2.dll</HintPath>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="N2, Version=2.6.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\N2CMS.Library.2.6.2.2\lib\net40\N2.dll</HintPath>
     </Reference>
     <Reference Include="N2.Extensions">
       <HintPath>..\packages\N2CMS.2.3.0.1\lib\N2.Extensions.dll</HintPath>
@@ -71,11 +80,13 @@
     <Reference Include="N2.Packaging">
       <HintPath>..\packages\N2CMS.2.3.0.1\lib\N2.Packaging.dll</HintPath>
     </Reference>
-    <Reference Include="N2.Razor">
-      <HintPath>..\packages\N2CMS.Razor.2.3\lib\NET40\N2.Razor.dll</HintPath>
+    <Reference Include="N2.Razor, Version=2.6.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\N2CMS.Razor.2.6.2.2\lib\net40\N2.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>..\packages\NHibernate.3.3.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.Caches.SysCache2">
       <HintPath>..\packages\N2CMS.2.3.0.1\lib\NHibernate.Caches.SysCache2.dll</HintPath>
@@ -86,9 +97,18 @@
     <Reference Include="System.Data.SQLite.Linq">
       <HintPath>..\packages\System.Data.SQLite.1.0.81.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.WebPages" />
-    <Reference Include="System.Web.Helpers" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -99,6 +119,18 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -110,80 +142,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dinamico\Controllers\ContentPagesController.cs" />
-    <Compile Include="Dinamico\Controllers\ContentPartsController.cs" />
-    <Compile Include="Dinamico\Controllers\FallbackController.cs" />
-    <Compile Include="Dinamico\Controllers\LanguageIntersectionController.cs" />
-    <Compile Include="Dinamico\Controllers\MembershipController.cs" />
-    <Compile Include="Dinamico\Controllers\StartPageController.cs" />
-    <Compile Include="Dinamico\Controllers\TestController.cs" />
-    <Compile Include="Dinamico\Defaults.cs" />
-    <Compile Include="Dinamico\GlobalMvcStarter.cs" />
-    <Compile Include="Dinamico\Models\AccountModels.cs" />
-    <Compile Include="Dinamico\Models\ContentPage.cs" />
-    <Compile Include="Dinamico\Models\ContentPart.cs" />
-    <Compile Include="Dinamico\Models\LanguageIntersection.cs" />
-    <Compile Include="Dinamico\Models\PageModelBase.cs" />
-    <Compile Include="Dinamico\Models\PartModelBase.cs" />
-    <Compile Include="Dinamico\Models\StartPage.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="apple-touch-icon.png" />
-    <Content Include="App_Data\SampleContent.n2.xml.gz.txt" />
-    <Content Include="Dinamico\N2\readme.txt" />
-    <Content Include="Dinamico\readme.txt" />
-    <Content Include="Dinamico\Themes\Cloudy\Content\Elements.css" />
-    <Content Include="Dinamico\Themes\Cloudy\Content\fade.png" />
-    <Content Include="Dinamico\Themes\Cloudy\Content\home.png" />
-    <Content Include="Dinamico\Themes\Cloudy\Content\Layout.css" />
-    <Content Include="Dinamico\Themes\Cloudy\Content\Mood.css" />
-    <Content Include="Dinamico\Themes\Cloudy\Content\Site.css" />
-    <Content Include="Dinamico\Themes\Cloudy\Thumbnail.JPG" />
-    <Content Include="Dinamico\Themes\Concrete\Content\Layout.css" />
-    <Content Include="Dinamico\Themes\Concrete\Content\Mood.css" />
-    <Content Include="Dinamico\Themes\Concrete\Content\Site.css" />
-    <Content Include="Dinamico\Themes\Concrete\Thumbnail.JPG" />
-    <Content Include="Dinamico\Themes\Dark\Content\Elements.css" />
-    <Content Include="Dinamico\Themes\Dark\Content\Layout.css" />
-    <Content Include="Dinamico\Themes\Dark\Content\Mood.css" />
-    <Content Include="Dinamico\Themes\Dark\Content\Site.css" />
-    <Content Include="Dinamico\Themes\Dark\Thumbnail.JPG" />
-    <Content Include="Dinamico\Themes\Default\Content\Boilerfoot.css" />
-    <Content Include="Dinamico\Themes\Default\Content\Boilerhead.css" />
-    <Content Include="Dinamico\Themes\Default\Content\Elements.css" />
-    <Content Include="Dinamico\Themes\Default\Content\Features.css" />
-    <Content Include="Dinamico\Themes\Default\Content\IE.css" />
-    <Content Include="Dinamico\Themes\Default\Content\Layout.css" />
-    <Content Include="Dinamico\Themes\Default\Content\Mood.css" />
-    <Content Include="Dinamico\Themes\Default\Content\Site.css" />
-    <Content Include="Dinamico\Themes\Default\Scripts\jquery.anythingslider.js" />
-    <Content Include="Dinamico\Themes\Default\Scripts\jquery.highlight-3.js" />
-    <Content Include="Dinamico\Themes\Default\Scripts\Site.js" />
-    <Content Include="Dinamico\Themes\Default\Thumbnail.JPG" />
-    <Content Include="Dinamico\Themes\Responsive\Content\Site.css" />
-    <Content Include="Dinamico\Themes\Responsive\css\bootstrap.css" />
-    <Content Include="Dinamico\Themes\Responsive\css\bootstrap.min.css" />
-    <Content Include="Dinamico\Themes\Responsive\img\glyphicons-halflings-white.png" />
-    <Content Include="Dinamico\Themes\Responsive\img\glyphicons-halflings.png" />
-    <Content Include="Dinamico\Themes\Responsive\js\bootstrap.js" />
-    <Content Include="Dinamico\Themes\Responsive\js\bootstrap.min.js" />
-    <Content Include="Dinamico\Themes\Roadwork\Content\down.png" />
-    <Content Include="Dinamico\Themes\Roadwork\Content\Elements.css" />
-    <Content Include="Dinamico\Themes\Roadwork\Content\home.png" />
-    <Content Include="Dinamico\Themes\Roadwork\Content\Layout.css" />
-    <Content Include="Dinamico\Themes\Roadwork\Content\Mood.css" />
-    <Content Include="Dinamico\Themes\Roadwork\Content\Site.css" />
-    <Content Include="Dinamico\Themes\Roadwork\Content\TopNavigation.css" />
-    <Content Include="Dinamico\Themes\Roadwork\Thumbnail.JPG" />
-    <Content Include="Dinamico\Themes\Terracotta\Content\fade.png" />
-    <Content Include="Dinamico\Themes\Terracotta\Content\Mood.css" />
-    <Content Include="Dinamico\Themes\Terracotta\Content\Site.css" />
-    <Content Include="Dinamico\Themes\Terracotta\Thumbnail.JPG" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\jquery-ui.css" />
@@ -200,45 +164,6 @@
     <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="N2\history.txt" />
-    <Content Include="N2\howto_develop.txt" />
-    <Content Include="N2\howto_install.txt" />
-    <Content Include="N2\license.txt" />
-    <Content Include="N2\n2_readme.txt" />
-    <Content Include="Upload\Images\copter.jpg" />
-    <Content Include="Upload\Images\copter_cube.jpg" />
-    <Content Include="Upload\Images\copter_half.jpg" />
-    <Content Include="Upload\Images\copter_icon.jpg" />
-    <Content Include="Upload\Images\copter_original.jpg" />
-    <Content Include="Upload\Images\copter_third.jpg" />
-    <Content Include="Upload\Images\copter_thumb.jpg" />
-    <Content Include="Upload\Images\copter_wide.jpg" />
-    <Content Include="Upload\Images\fronds.jpg" />
-    <Content Include="Upload\Images\fronds_cube.jpg" />
-    <Content Include="Upload\Images\fronds_half.jpg" />
-    <Content Include="Upload\Images\fronds_icon.jpg" />
-    <Content Include="Upload\Images\fronds_original.jpg" />
-    <Content Include="Upload\Images\fronds_third.jpg" />
-    <Content Include="Upload\Images\fronds_thumb.jpg" />
-    <Content Include="Upload\Images\fronds_wide.jpg" />
-    <Content Include="Upload\Images\jetty.jpg" />
-    <Content Include="Upload\Images\jetty_cube.jpg" />
-    <Content Include="Upload\Images\jetty_half.jpg" />
-    <Content Include="Upload\Images\jetty_icon.jpg" />
-    <Content Include="Upload\Images\jetty_original.jpg" />
-    <Content Include="Upload\Images\jetty_third.jpg" />
-    <Content Include="Upload\Images\jetty_thumb.jpg" />
-    <Content Include="Upload\Images\jetty_wide.jpg" />
-    <Content Include="Upload\Images\reeds.jpg" />
-    <Content Include="Upload\Images\reeds_cube.jpg" />
-    <Content Include="Upload\Images\reeds_half.jpg" />
-    <Content Include="Upload\Images\reeds_icon.jpg" />
-    <Content Include="Upload\Images\reeds_original.jpg" />
-    <Content Include="Upload\Images\reeds_third.jpg" />
-    <Content Include="Upload\Images\reeds_thumb.jpg" />
-    <Content Include="Upload\Images\reeds_wide.jpg" />
-    <Content Include="Upload\n2logo.png" />
-    <Content Include="Upload\n2logo_white.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -284,93 +209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\n2_host.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Dinamico\Themes\Web.config.MVC4" />
-    <Content Include="Dinamico\Themes\Terracotta\Views\Web.config" />
-    <Content Include="Dinamico\Themes\Roadwork\Views\Web.config" />
-    <Content Include="Dinamico\Themes\Roadwork\Views\Shared\LayoutPartials\TopNavigation.cshtml" />
-    <Content Include="Dinamico\Themes\Roadwork\Views\Shared\LayoutPartials\SubNavigation.cshtml" />
-    <Content Include="Dinamico\Themes\Roadwork\Views\Shared\LayoutPartials\Logotype.cshtml" />
-    <Content Include="Dinamico\Themes\Roadwork\Views\Shared\LayoutPartials\Footer.cshtml" />
-    <Content Include="Dinamico\Themes\Responsive\Views\Web.config" />
-    <Content Include="Dinamico\Themes\Responsive\Views\Shared\LayoutPartials\Navbar.cshtml" />
-    <Content Include="Dinamico\Themes\Responsive\Views\Shared\_Layout.cshtml" />
-    <Content Include="Dinamico\Themes\Responsive\Views\ContentParts\ThreeColumns.cshtml" />
-    <Content Include="Dinamico\Themes\Responsive\Views\_ViewStart.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Web.config" />
-    <Content Include="Dinamico\Themes\Default\Views\Test\Index.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\StartPage\NotFound.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\StartPage\Index.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\TOC.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\SubsequentSiblings.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\StartPage.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\Siblings.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\Search.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\Published.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\PreviousSibling.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\PrecedingSiblings.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\Parent.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\NextSibling.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\Google+1.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\FirstChild.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\FacebookLike.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\Detail.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\Children.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\Changes.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\Breadcrumb.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\TokenTemplates\Author.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\Partials\ContentLink.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\Translations.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\TopNavigation.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\Top.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\SubNavigation.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\SiteMap.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\Search.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\PreContent.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\PostContent.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\Logotype.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\LogOn.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\Header.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\Head.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\Footer.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\Content.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\LayoutPartials\BlogContent.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\Error.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Shared\_Layout.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Membership\Register.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Membership\LogOn.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Membership\ChangePasswordSuccess.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\Membership\ChangePassword.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\LanguageIntersection\Index.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\YouTube.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\TwoColumns.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\ThreeColumns.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\Teaser.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\Slider.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\Partials\GMapCoordinate.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\Partials\GMapAddress.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\Listing.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\Index.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\GMap.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentParts\ContentSlider.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentPages\News.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentPages\Index.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\ContentPages\Container.cshtml" />
-    <Content Include="Dinamico\Themes\Default\Views\_ViewStart.cshtml" />
-    <Content Include="Dinamico\Themes\Dark\Views\Web.config" />
-    <Content Include="Dinamico\Themes\Dark\Views\Shared\LayoutPartials\PreContent.cshtml" />
-    <Content Include="Dinamico\Themes\Dark\Views\Shared\LayoutPartials\Header.cshtml" />
-    <Content Include="Dinamico\Themes\Concrete\Views\Web.config" />
-    <Content Include="Dinamico\Themes\Concrete\Views\Shared\LayoutPartials\PreContent.cshtml" />
-    <Content Include="Dinamico\Themes\Concrete\Views\Shared\LayoutPartials\Header.cshtml" />
-    <Content Include="Dinamico\Themes\Cloudy\Views\Web.config" />
-    <Content Include="Dinamico\Themes\Cloudy\Views\Shared\LayoutPartials\TopNavigation.cshtml" />
-    <Content Include="Dinamico\Themes\Cloudy\Views\Shared\LayoutPartials\SubNavigation.cshtml" />
-    <Content Include="Dinamico\Themes\Cloudy\Views\Shared\LayoutPartials\PreContent.cshtml" />
-    <Content Include="Dinamico\Themes\Cloudy\Views\Shared\LayoutPartials\Header.cshtml" />
-    <None Include="App_Data\SampleContent.n2.xml.gz" />
-    <None Include="Dinamico\Themes\Web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
