@@ -8,7 +8,7 @@
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{294BADE1-4699-4550-87C2-B82FD2C7D193}</ProjectGuid>
-    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>n2cms_www</RootNamespace>
@@ -51,7 +51,8 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections">
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
@@ -62,31 +63,22 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="N2, Version=2.6.2.2, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="N2, Version=2.6.3.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\N2CMS.Library.2.6.2.2\lib\net40\N2.dll</HintPath>
+      <HintPath>..\packages\N2CMS.Library.2.6.3.5\lib\net45\N2.dll</HintPath>
     </Reference>
-    <Reference Include="N2.Extensions, Version=2.6.2.2, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="N2.Extensions">
+      <HintPath>..\packages\N2CMS.Management.NoZip.2.6.3.5\lib\N2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="N2.Management">
+      <HintPath>..\packages\N2CMS.Management.NoZip.2.6.3.5\lib\N2.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="N2.Razor, Version=2.6.3.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\N2CMS.Management.2.6.2.2\lib\N2.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="N2.IoC.Windsor3">
-      <HintPath>..\packages\N2CMS.Management.2.6.2.2\lib\N2.IoC.Windsor3.dll</HintPath>
-    </Reference>
-    <Reference Include="N2.Management, Version=2.6.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\N2CMS.Management.2.6.2.2\lib\N2.Management.dll</HintPath>
-    </Reference>
-    <Reference Include="N2.Packaging, Version=2.6.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\N2CMS.Management.2.6.2.2\lib\N2.Packaging.dll</HintPath>
-    </Reference>
-    <Reference Include="N2.Razor, Version=2.6.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\N2CMS.Razor.2.6.2.2\lib\net40\N2.Razor.dll</HintPath>
+      <HintPath>..\packages\N2CMS.Razor.2.6.3.5\lib\net45\N2.Razor.dll</HintPath>
     </Reference>
     <Reference Include="N2.ReusableParts">
-      <HintPath>..\packages\N2CMS.Management.2.6.2.2\lib\N2.ReusableParts.dll</HintPath>
+      <HintPath>..\packages\N2CMS.ReusableParts.2.6.3.5\lib\NET40\N2.ReusableParts.dll</HintPath>
     </Reference>
     <Reference Include="N2.Search.Lucene">
       <HintPath>..\packages\N2CMS.Search.Lucene.2.6.2.2\lib\N2.Search.Lucene.dll</HintPath>
@@ -97,10 +89,6 @@
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -109,28 +97,32 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -168,9 +160,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="apple-touch-icon.png" />
-    <Content Include="App_Data\SampleContent.n2.xml.gz.txt" />
-    <Content Include="Content\fonts\glyphiconshalflings-regular.svg" />
     <Content Include="Dinamico\N2\readme.txt" />
     <Content Include="Dinamico\readme.txt" />
     <Content Include="Dinamico\Themes\Cloudy\bak\Content\Elements.css" />
@@ -207,6 +196,19 @@
     <Content Include="Dinamico\Themes\Default\lib\jquery\jquery.highlight-3.js" />
     <Content Include="Dinamico\Themes\Default\Scripts\Site.js" />
     <Content Include="Dinamico\Themes\Default\Thumbnail.JPG" />
+    <Content Include="Dinamico\Themes\N2CMS\css\bootstrap.min.css" />
+    <Content Include="Dinamico\Themes\N2CMS\css\default.css" />
+    <Content Include="Dinamico\Themes\N2CMS\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Dinamico\Themes\N2CMS\images\bg-repeat.jpg" />
+    <Content Include="Dinamico\Themes\N2CMS\images\crane_rt.png" />
+    <Content Include="Dinamico\Themes\N2CMS\images\desktop-logo.png" />
+    <Content Include="Dinamico\Themes\N2CMS\images\girder_vtile.png" />
+    <Content Include="Dinamico\Themes\N2CMS\images\mobile-logo.png" />
+    <Content Include="Dinamico\Themes\N2CMS\index.html" />
+    <Content Include="Dinamico\Themes\N2CMS\js\bootstrap.js" />
+    <Content Include="Dinamico\Themes\N2CMS\js\bootstrap.min.js" />
+    <Content Include="Dinamico\Themes\N2CMS\js\jquery-1.10.2.min.js" />
+    <Content Include="Dinamico\Themes\N2CMS\js\mainscript.js" />
     <Content Include="Dinamico\Themes\Responsive\bak\Content\Site.css" />
     <Content Include="Dinamico\Themes\Responsive\bak\img\glyphicons-halflings-white.png" />
     <Content Include="Dinamico\Themes\Responsive\bak\img\glyphicons-halflings.png" />
@@ -222,7 +224,6 @@
     <Content Include="Dinamico\Themes\Terracotta\bak\Content\Mood.css" />
     <Content Include="Dinamico\Themes\Terracotta\bak\Content\Site.css" />
     <Content Include="Dinamico\Themes\Terracotta\Thumbnail.JPG" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\jquery-ui.css" />
@@ -239,38 +240,367 @@
     <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="N2\history.txt" />
-    <Content Include="N2\howto_develop.txt" />
-    <Content Include="N2\howto_install.txt" />
-    <Content Include="N2\license.txt" />
-    <Content Include="N2\n2_readme.txt" />
-    <Content Include="N2\upgrade.txt" />
-    <Content Include="Upload\Images\copter.jpg" />
-    <Content Include="Upload\Images\copter_half.jpg" />
-    <Content Include="Upload\Images\copter_icon.jpg" />
-    <Content Include="Upload\Images\copter_original.jpg" />
-    <Content Include="Upload\Images\copter_thumb.jpg" />
-    <Content Include="Upload\Images\copter_wide.jpg" />
-    <Content Include="Upload\Images\fronds.jpg" />
-    <Content Include="Upload\Images\fronds_half.jpg" />
-    <Content Include="Upload\Images\fronds_icon.jpg" />
-    <Content Include="Upload\Images\fronds_original.jpg" />
-    <Content Include="Upload\Images\fronds_thumb.jpg" />
-    <Content Include="Upload\Images\fronds_wide.jpg" />
-    <Content Include="Upload\Images\jetty.jpg" />
-    <Content Include="Upload\Images\jetty_half.jpg" />
-    <Content Include="Upload\Images\jetty_icon.jpg" />
-    <Content Include="Upload\Images\jetty_original.jpg" />
-    <Content Include="Upload\Images\jetty_thumb.jpg" />
-    <Content Include="Upload\Images\jetty_wide.jpg" />
-    <Content Include="Upload\Images\reeds.jpg" />
-    <Content Include="Upload\Images\reeds_half.jpg" />
-    <Content Include="Upload\Images\reeds_icon.jpg" />
-    <Content Include="Upload\Images\reeds_original.jpg" />
-    <Content Include="Upload\Images\reeds_thumb.jpg" />
-    <Content Include="Upload\Images\reeds_wide.jpg" />
-    <Content Include="Upload\n2logo.png" />
-    <Content Include="Upload\n2logo_white.png" />
+    <Content Include="N2\App\i18n\en.js" />
+    <Content Include="N2\App\Js\Controllers.js" />
+    <Content Include="N2\App\Js\Directives.js" />
+    <Content Include="N2\App\Js\Services.js" />
+    <Content Include="N2\App\Partials\ContentAdd.html" />
+    <Content Include="N2\App\Partials\ContentBranch.html" />
+    <Content Include="N2\App\Partials\ContentContextMenu.html" />
+    <Content Include="N2\App\Partials\ContentInfo.html" />
+    <Content Include="N2\App\Partials\ContentLanguage.html" />
+    <Content Include="N2\App\Partials\ContentPreview.html" />
+    <Content Include="N2\App\Partials\ContentPublishSchedule.html" />
+    <Content Include="N2\App\Partials\ContentScheduleDialog.html" />
+    <Content Include="N2\App\Partials\ContentSearch.html" />
+    <Content Include="N2\App\Partials\ContentTransitions.html" />
+    <Content Include="N2\App\Partials\ContentTree.html" />
+    <Content Include="N2\App\Partials\ContentVersions.html" />
+    <Content Include="N2\App\Partials\Footer.html" />
+    <Content Include="N2\App\Partials\FrameAction.html" />
+    <Content Include="N2\App\Partials\Framework.html" />
+    <Content Include="N2\App\Partials\Loading.html" />
+    <Content Include="N2\App\Partials\Main.html" />
+    <Content Include="N2\App\Partials\Management.html" />
+    <Content Include="N2\App\Partials\ManagementConfirm.html" />
+    <Content Include="N2\App\Partials\Menu.html" />
+    <Content Include="N2\App\Partials\MenuNode.html" />
+    <Content Include="N2\App\Partials\MenuNodeLastChild.html" />
+    <Content Include="N2\App\Partials\MenuSubNode.html" />
+    <Content Include="N2\Content\Activity\RecentActivity.ascx" />
+    <Content Include="N2\Content\AffectedItems.ascx" />
+    <Content Include="N2\Content\AvailableZones.ascx" />
+    <Content Include="N2\Content\Copy.aspx" />
+    <Content Include="N2\Content\Default.aspx" />
+    <Content Include="N2\Content\Delete.aspx" />
+    <Content Include="N2\Content\Dependencies.aspx" />
+    <Content Include="N2\Content\DiscardPreview.aspx" />
+    <Content Include="N2\Content\Edit.aspx" />
+    <Content Include="N2\Content\EditRecursive.aspx" />
+    <Content Include="N2\Content\EditSingle.aspx" />
+    <Content Include="N2\Content\Export\BulkEditing.aspx" />
+    <Content Include="N2\Content\Export\CsvImport.ascx" />
+    <Content Include="N2\Content\Export\Default.aspx" />
+    <Content Include="N2\Content\Export\Export.aspx" />
+    <Content Include="N2\Content\Export\ItemXmlImport.ascx" />
+    <Content Include="N2\Content\Globalization\Default.aspx" />
+    <Content Include="N2\Content\Globalization\LanguageMenu.ascx" />
+    <Content Include="N2\Content\Globalization\Languages.ascx" />
+    <Content Include="N2\Content\Globalization\Translate.aspx" />
+    <Content Include="N2\Content\ItemInfo.ascx" />
+    <Content Include="N2\Content\LinkTracker\Default.aspx" />
+    <Content Include="N2\Content\LinkTracker\UpdateReferences.aspx" />
+    <Content Include="N2\Content\Move.aspx" />
+    <Content Include="N2\Content\Navigation\ContextMenu.ascx" />
+    <Content Include="N2\Content\Navigation\Search.aspx" />
+    <Content Include="N2\Content\Navigation\Tree.aspx" />
+    <Content Include="N2\Content\Navigation\Tree.js" />
+    <Content Include="N2\Content\New.aspx" />
+    <Content Include="N2\Content\Paste.aspx" />
+    <Content Include="N2\Content\PublishPreview.aspx" />
+    <Content Include="N2\Content\ReferencingItems.ascx" />
+    <Content Include="N2\Content\Security\Default.aspx" />
+    <Content Include="N2\Content\Settings\Default.aspx" />
+    <Content Include="N2\Content\Settings\SettingsEditor.ascx" />
+    <Content Include="N2\Content\Templates\Default.aspx" />
+    <Content Include="N2\Content\Trash\Default.aspx" />
+    <Content Include="N2\Content\Versions\Default.aspx" />
+    <Content Include="N2\Content\Versions\RecentVersions.ascx" />
+    <Content Include="N2\Content\Wizard\Default.aspx" />
+    <Content Include="N2\Default.aspx" />
+    <Content Include="N2\Empty.aspx" />
+    <Content Include="N2\Externals\External.ascx" />
+    <Content Include="N2\Files\Crop.aspx" />
+    <Content Include="N2\Files\Css\Files.css" />
+    <Content Include="N2\Files\Css\Jcrop.gif" />
+    <Content Include="N2\Files\Css\jquery.Jcrop.min.css" />
+    <Content Include="N2\Files\Default.aspx" />
+    <Content Include="N2\Files\FileSystem\Directory.aspx" />
+    <Content Include="N2\Files\FileSystem\Export.aspx" />
+    <Content Include="N2\Files\FileSystem\File.aspx" />
+    <Content Include="N2\Files\FileSystem\FileUpload.ascx" />
+    <Content Include="N2\Files\FileSystem\FileUpload.js" />
+    <Content Include="N2\Files\Js\FileSelection.js" />
+    <Content Include="N2\Files\Js\jquery.color.js" />
+    <Content Include="N2\Files\Js\jquery.Jcrop.min.js" />
+    <Content Include="N2\Files\Js\jquery.MultiFile.js" />
+    <Content Include="N2\Files\Rebuild.aspx" />
+    <Content Include="N2\Installation\Begin\Default.aspx" />
+    <Content Include="N2\Installation\Default.aspx" />
+    <Content Include="N2\Installation\Diagnose.aspx" />
+    <Content Include="N2\Installation\Fix.aspx" />
+    <Content Include="N2\Installation\FixClass.aspx" />
+    <Content Include="N2\Installation\mysql.upgrade.2.sql" />
+    <Content Include="N2\Installation\Rebase.aspx" />
+    <Content Include="N2\Installation\Upgrade.aspx" />
+    <Content Include="N2\Installation\UpgradeVersions.aspx" />
+    <Content Include="N2\Login.aspx" />
+    <Content Include="N2\Myself\Activity.ascx" />
+    <Content Include="N2\Myself\Analytics\Resources\excanvas.js" />
+    <Content Include="N2\Myself\Analytics\Resources\excanvas.min.js" />
+    <Content Include="N2\Myself\Analytics\Resources\jquery.flot.js" />
+    <Content Include="N2\Myself\Analytics\Resources\jquery.flot.min.js" />
+    <Content Include="N2\Myself\Analytics\Views\ManageAnalytics\ConfigureStatistics.ascx" />
+    <Content Include="N2\Myself\Analytics\Views\ManageAnalytics\Index.ascx" />
+    <Content Include="N2\Myself\Analytics\Views\ManageAnalytics\InputToken.ascx" />
+    <Content Include="N2\Myself\Analytics\Views\ManageAnalytics\SelectAccount.ascx" />
+    <Content Include="N2\Myself\Analytics\Views\ManageAnalytics\Statistics.ascx" />
+    <Content Include="N2\Myself\EditPassword.aspx" />
+    <Content Include="N2\Myself\Languages.ascx" />
+    <Content Include="N2\Myself\Root.aspx" />
+    <Content Include="N2\Myself\Statistics.ascx" />
+    <Content Include="N2\Myself\Wizards.ascx" />
+    <Content Include="N2\Resources\bootstrap-components\bootstrap-datepicker.css" />
+    <Content Include="N2\Resources\bootstrap-components\bootstrap-datepicker.js" />
+    <Content Include="N2\Resources\bootstrap-components\bootstrap-timepicker.css" />
+    <Content Include="N2\Resources\bootstrap-components\bootstrap-timepicker.js" />
+    <Content Include="N2\Resources\chosen_v1.1.0\chosen-sprite%402x.png" />
+    <Content Include="N2\Resources\chosen_v1.1.0\chosen-sprite.png" />
+    <Content Include="N2\Resources\chosen_v1.1.0\chosen.css" />
+    <Content Include="N2\Resources\chosen_v1.1.0\chosen.jquery.js" />
+    <Content Include="N2\Resources\chosen_v1.1.0\chosen.jquery.min.js" />
+    <Content Include="N2\Resources\chosen_v1.1.0\chosen.min.css" />
+    <Content Include="N2\Resources\chosen_v1.1.0\index.html" />
+    <Content Include="N2\Resources\chosen_v1.1.0\options.html" />
+    <Content Include="N2\Resources\ckeditor\config.js" />
+    <Content Include="N2\Resources\Css\all.css" />
+    <Content Include="N2\Resources\Css\default.css" />
+    <Content Include="N2\Resources\Css\edit.css" />
+    <Content Include="N2\Resources\Css\exportImport.css" />
+    <Content Include="N2\Resources\Css\framed.css" />
+    <Content Include="N2\Resources\Css\Globalization.css" />
+    <Content Include="N2\Resources\Css\IE6.css" />
+    <Content Include="N2\Resources\Css\jquery.multiselect.css" />
+    <Content Include="N2\Resources\Css\jquery.multiselect.filter.css" />
+    <Content Include="N2\Resources\Css\n2.css" />
+    <Content Include="N2\Resources\Css\Parts.css" />
+    <Content Include="N2\Resources\Css\Root.css" />
+    <Content Include="N2\Resources\Css\smoothness\images\animated-overlay.gif" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="N2\Resources\Css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="N2\Resources\Css\smoothness\jquery-ui-1.10.2.custom.css" />
+    <Content Include="N2\Resources\Css\smoothness\jquery-ui-1.10.2.custom.min.css" />
+    <Content Include="N2\Resources\Css\smoothness\jquery-ui-1.8.22.dialog.css" />
+    <Content Include="N2\Resources\Css\smoothness\jquery-ui-1.8.22.full.css" />
+    <Content Include="N2\Resources\Css\TabPanel.css" />
+    <Content Include="N2\Resources\Css\themes\choc.css" />
+    <Content Include="N2\Resources\Css\themes\default.css" />
+    <Content Include="N2\Resources\Css\themes\icms.css" />
+    <Content Include="N2\Resources\Css\themes\ink.css" />
+    <Content Include="N2\Resources\Css\tree.css" />
+    <Content Include="N2\Resources\icons\default.html" />
+    <Content Include="N2\Resources\icons\flags.css" />
+    <Content Include="N2\Resources\icons\flags.png" />
+    <Content Include="N2\Resources\icons\glyphicons.css" />
+    <Content Include="N2\Resources\icons\glyphicons.png" />
+    <Content Include="N2\Resources\icons\silk.css" />
+    <Content Include="N2\Resources\icons\silk.png" />
+    <Content Include="N2\Resources\img\ajax-loader.gif" />
+    <Content Include="N2\Resources\img\arrow-down.png" />
+    <Content Include="N2\Resources\img\bg.gif" />
+    <Content Include="N2\Resources\img\bg_00020.png" />
+    <Content Include="N2\Resources\img\bg_00050.png" />
+    <Content Include="N2\Resources\img\bg_fff20.png" />
+    <Content Include="N2\Resources\img\bg_fff50.png" />
+    <Content Include="N2\Resources\img\book_previous.gif" />
+    <Content Include="N2\Resources\img\bullet_arrow_down.gif" />
+    <Content Include="N2\Resources\img\bullet_star.gif" />
+    <Content Include="N2\Resources\img\darken10.png" />
+    <Content Include="N2\Resources\img\darken25.png" />
+    <Content Include="N2\Resources\img\fieldset_bg.png" />
+    <Content Include="N2\Resources\img\framed_bg.gif" />
+    <Content Include="N2\Resources\img\framed_opener.gif" />
+    <Content Include="N2\Resources\img\framed_toolbar.gif" />
+    <Content Include="N2\Resources\img\framed_top.gif" />
+    <Content Include="N2\Resources\img\grabber.png" />
+    <Content Include="N2\Resources\img\grid_alt.gif" />
+    <Content Include="N2\Resources\img\gripper.gif" />
+    <Content Include="N2\Resources\img\lighten10.png" />
+    <Content Include="N2\Resources\img\lighten25.png" />
+    <Content Include="N2\Resources\img\lighten5.png" />
+    <Content Include="N2\Resources\img\login_bg.gif" />
+    <Content Include="N2\Resources\img\login_logo.png" />
+    <Content Include="N2\Resources\img\login_panel.gif" />
+    <Content Include="N2\Resources\img\logo.png" />
+    <Content Include="N2\Resources\img\minus.png" />
+    <Content Include="N2\Resources\img\n2.png" />
+    <Content Include="N2\Resources\img\part_bg.png" />
+    <Content Include="N2\Resources\img\pencil.png" />
+    <Content Include="N2\Resources\img\plus.png" />
+    <Content Include="N2\Resources\img\search.png" />
+    <Content Include="N2\Resources\img\separator.png" />
+    <Content Include="N2\Resources\img\shading.png" />
+    <Content Include="N2\Resources\img\shading_blue.png" />
+    <Content Include="N2\Resources\img\shading_green.png" />
+    <Content Include="N2\Resources\img\shading_purple.png" />
+    <Content Include="N2\Resources\img\sliding-loader.png" />
+    <Content Include="N2\Resources\img\smallico\clock.png" />
+    <Content Include="N2\Resources\img\smallico\close_2.png" />
+    <Content Include="N2\Resources\img\smallico\home.png" />
+    <Content Include="N2\Resources\img\splitter.gif" />
+    <Content Include="N2\Resources\img\tabs_base.gif" />
+    <Content Include="N2\Resources\img\tabs_begin.gif" />
+    <Content Include="N2\Resources\img\tab_button_bg.png" />
+    <Content Include="N2\Resources\img\tab_end.gif" />
+    <Content Include="N2\Resources\img\tab_selected.gif" />
+    <Content Include="N2\Resources\img\toolarea_bg.gif" />
+    <Content Include="N2\Resources\img\toolbar_bg.gif" />
+    <Content Include="N2\Resources\img\toolbar_button_bg.png" />
+    <Content Include="N2\Resources\img\toolbar_button_bg_hover.png" />
+    <Content Include="N2\Resources\img\toolitem_separator.gif" />
+    <Content Include="N2\Resources\img\tools.png" />
+    <Content Include="N2\Resources\img\treeview\collapsable-last.gif" />
+    <Content Include="N2\Resources\img\treeview\collapsable.gif" />
+    <Content Include="N2\Resources\img\treeview\expandable-last.gif" />
+    <Content Include="N2\Resources\img\treeview\expandable.gif" />
+    <Content Include="N2\Resources\img\treeview\leaf-last.gif" />
+    <Content Include="N2\Resources\img\treeview\leaf.gif" />
+    <Content Include="N2\Resources\img\treeview\root.gif" />
+    <Content Include="N2\Resources\img\treeview\spacer.gif" />
+    <Content Include="N2\Resources\img\treeview\spinner.gif" />
+    <Content Include="N2\Resources\img\tv\tv-collapsable-last.gif" />
+    <Content Include="N2\Resources\img\tv\tv-collapsable.gif" />
+    <Content Include="N2\Resources\img\tv\tv-expandable-last.gif" />
+    <Content Include="N2\Resources\img\tv\tv-expandable.gif" />
+    <Content Include="N2\Resources\img\tv\tv-item-last.gif" />
+    <Content Include="N2\Resources\img\tv\tv-item.gif" />
+    <Content Include="N2\Resources\img\ui\sprite.png" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\css\jquery.fileupload-ui-noscript.css" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\css\jquery.fileupload-ui.css" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\css\style.css" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\app.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\jquery.fileupload-angular.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\jquery.fileupload-audio.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\jquery.fileupload-image.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\jquery.fileupload-process.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\jquery.fileupload-ui.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\jquery.fileupload-validate.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\jquery.fileupload-video.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\jquery.fileupload.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\jquery.iframe-transport.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\main.js" />
+    <Content Include="N2\Resources\jQuery-File-Upload-8.5.0\js\vendor\jquery.ui.widget.js" />
+    <Content Include="N2\Resources\Js\ContextMenu.js" />
+    <Content Include="N2\Resources\Js\EditableTags.js" />
+    <Content Include="N2\Resources\Js\frameInteraction.js" />
+    <Content Include="N2\Resources\Js\jquery-1.11.0.js" />
+    <Content Include="N2\Resources\Js\jquery-1.11.0.min.js" />
+    <Content Include="N2\Resources\Js\jquery.editableThemeSelection.js" />
+    <Content Include="N2\Resources\Js\less-1.4.1.min.js" />
+    <Content Include="N2\Resources\Js\n2.js" />
+    <Content Include="N2\Resources\Js\parts.js" />
+    <Content Include="N2\Resources\Js\plugins\aaa.js" />
+    <Content Include="N2\Resources\Js\plugins\date.js" />
+    <Content Include="N2\Resources\Js\plugins\hogan-2.0.0.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.cookie.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.datePicker.min-2.1.1.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.layout-latest.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2autocomplete.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2contextmenu-0.3.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2datepicker.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2dimmable.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2expandable.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2expandableBox.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2glow.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2keyboard.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2name.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2optionmenu.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2revealer.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.n2tabs.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.SimpleTree.js" />
+    <Content Include="N2\Resources\Js\plugins\jquery.splitter.js" />
+    <Content Include="N2\Resources\Js\plugins\n2.js" />
+    <Content Include="N2\Resources\Js\UrlSelection.js" />
+    <Content Include="N2\Resources\KeepAlive\ping.aspx" />
+    <Content Include="N2\Resources\mediaelement-js\background.png" />
+    <Content Include="N2\Resources\mediaelement-js\bigplay.png" />
+    <Content Include="N2\Resources\mediaelement-js\bigplay.svg" />
+    <Content Include="N2\Resources\mediaelement-js\controls-ted.png" />
+    <Content Include="N2\Resources\mediaelement-js\controls-wmp-bg.png" />
+    <Content Include="N2\Resources\mediaelement-js\controls-wmp.png" />
+    <Content Include="N2\Resources\mediaelement-js\controls.png" />
+    <Content Include="N2\Resources\mediaelement-js\controls.svg" />
+    <Content Include="N2\Resources\mediaelement-js\flashmediaelement-cdn.swf" />
+    <Content Include="N2\Resources\mediaelement-js\flashmediaelement.swf" />
+    <Content Include="N2\Resources\mediaelement-js\loading.gif" />
+    <Content Include="N2\Resources\mediaelement-js\mediaelement-and-player.min.js" />
+    <Content Include="N2\Resources\mediaelement-js\mediaelement.min.js" />
+    <Content Include="N2\Resources\mediaelement-js\mediaelementplayer.css" />
+    <Content Include="N2\Resources\mediaelement-js\mediaelementplayer.js" />
+    <Content Include="N2\Resources\mediaelement-js\mediaelementplayer.min.css" />
+    <Content Include="N2\Resources\mediaelement-js\mediaelementplayer.min.js" />
+    <Content Include="N2\Resources\mediaelement-js\mejs-skins.css" />
+    <Content Include="N2\Resources\mediaelement-js\sizzle.min.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\index.html" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shAutoloader.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushBash.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushCpp.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushCSharp.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushCss.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushDiff.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushJava.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushJScript.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushPerl.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushPhp.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushPlain.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushPython.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushRuby.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushSass.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushSql.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushVb.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shBrushXml.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shCore.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\scripts\shLegacy.js" />
+    <Content Include="N2\Resources\syntaxhighlighter\styles\shCore.css" />
+    <Content Include="N2\Resources\syntaxhighlighter\styles\shCoreDefault.css" />
+    <Content Include="N2\Resources\syntaxhighlighter\styles\shThemeDefault.css" />
+    <Content Include="N2\Roles\Edit.aspx" />
+    <Content Include="N2\Roles\New.aspx" />
+    <Content Include="N2\Roles\Roles.aspx" />
+    <Content Include="N2\Search\ManageIndex.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Author.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Breadcrumb.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Changes.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\ChildPages.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Children.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Detail.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\FacebookLike.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\FirstChild.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\FormCheckbox.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\FormFile.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\FormInput.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\FormRadio.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\FormSelect.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\FormSubmit.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\FormTextarea.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Google+1.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Link.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\NextSibling.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Parent.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\PreviousSibling.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Published.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Search.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\Siblings.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\StartPage.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\SyntaxHighlighter.ascx" />
+    <Content Include="N2\Tokens\TokenTemplates\TOC.ascx" />
+    <Content Include="N2\Users\Activity.aspx" />
+    <Content Include="N2\Users\Edit.aspx" />
+    <Content Include="N2\Users\New.aspx" />
+    <Content Include="N2\Users\Password.aspx" />
+    <Content Include="N2\Users\Users.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -302,11 +632,270 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Users\App_LocalResources\Users.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Users\App_LocalResources\Password.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Users\App_LocalResources\New.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Users\App_LocalResources\Edit.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Top.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Simple.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Search\IndexInfo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Roles\App_LocalResources\Roles.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Roles\App_LocalResources\New.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Roles\App_LocalResources\Edit.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Resources\RedirectHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Resources\MessageSink.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Resources\KeepAlive\Ping.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Resources\Js\tinymce.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Resources\Js\plugins.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Resources\Js\jquery.ui.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Resources\IconHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Myself\App_LocalResources\Wizards.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Myself\Analytics\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Installation\UpgradeVersion.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Installation\system.diagnostics.trace.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Installation\log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Files\Resize.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Files\FileSystem\UploadFile.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Files\FileSystem\App_LocalResources\FileUpload.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Files\FileSystem\App_LocalResources\File.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Files\FileSystem\App_LocalResources\Directory.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Files\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Files\App_LocalResources\Default.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Wizard\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Wizard\App_LocalResources\Default.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Versions\App_LocalResources\RecentVersions.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Versions\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Versions\App_LocalResources\Default.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Trash\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Trash\App_LocalResources\Default.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Templates\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Settings\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Settings\App_LocalResources\Default.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Security\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Security\App_LocalResources\Default.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\SortUp.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\SortDown.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\LoadTree.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\App_LocalResources\Tree.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\App_LocalResources\Tree.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\App_LocalResources\Table.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\App_LocalResources\Table.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\App_LocalResources\Settings.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\App_LocalResources\Settings.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\App_LocalResources\Search.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\App_LocalResources\Search.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\App_LocalResources\Navigation.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Navigation\App_LocalResources\Navigation.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\LinkTracker\UpdateReferencesTo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\LinkTracker\App_LocalResources\UpdateReferences.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\LinkTracker\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Globalization\App_LocalResources\Languages.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Globalization\App_LocalResources\Languages.ascx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Globalization\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Globalization\App_LocalResources\Default.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Framed.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Export\App_LocalResources\ItemXmlImport.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Export\App_LocalResources\Export.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Export\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Export\App_LocalResources\Default.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\Toolbar.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\Paste.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\New.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\Move.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\ItemInfo.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\Framed.Master.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\EditRecursive.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\Edit.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\Dependencies.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\Delete.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\Default.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\Copy.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\AvailableZones.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\App_LocalResources\AffectedItems.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Activity\Notify.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Activity\App_LocalResources\RecentActivity.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\Content\Activity\App_LocalResources\Default.aspx.mk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="N2\App_LocalResources\Login.aspx.resx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dinamico\Themes\Web.config" />
@@ -621,28 +1210,14 @@
     <Content Include="Dinamico\Themes\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\fonts\glyphiconshalflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\fonts\glyphiconshalflings-regular.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\fonts\glyphiconshalflings-regular.otf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\fonts\glyphiconshalflings-regular.eot" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Data\SampleContent.n2.xml.gz" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="N2\web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="N2\N2.zip" />
-    <None Include="N2\n2cms.configuration.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="Dinamico\Themes\N2CMS\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Dinamico\Themes\N2CMS\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Dinamico\Themes\N2CMS\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Dinamico\Themes\N2CMS\Views\Shared\Error.cshtml" />
+    <Content Include="Dinamico\Themes\N2CMS\Views\Shared\_Layout.cshtml" />
+    <Content Include="Dinamico\Themes\N2CMS\Views\StartPage\Index.cshtml" />
+    <Content Include="Dinamico\Themes\N2CMS\Views\StartPage\NotFound.cshtml" />
+    <Content Include="Dinamico\Themes\N2CMS\Views\Web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

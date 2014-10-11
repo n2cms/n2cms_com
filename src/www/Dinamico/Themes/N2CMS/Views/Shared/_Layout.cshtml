@@ -1,0 +1,128 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>@(Content.Has.SeoTitle ? Content.Data.SeoTitle : Content.Data.Title) - N2 CMS</title>
+
+    @Content.Register.Meta("Author").Container("Metadata").Display()
+    @Content.Register.Meta("Keywords").Container("Metadata").Display()
+    @Content.Register.Meta("Description").Container("Metadata").Display()
+
+    <link href="@Url.ThemedContent("~/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.ThemedContent("~/css/default.css")" rel="stylesheet" type="text/css" />
+    <link rel="canonical" href="@(Content.Data.Url ?? Request.RawUrl)" />
+
+    @{ Html.Resources().JQuery(); }
+    @{ Html.Resources().JavaScript(Url.ThemedContent("~/lib/bootstrap-3.0.3/js/bootstrap.min.js")); }
+    @{ Html.Resources().JavaScript(Url.ThemedContent("~/Scripts/site.js")); }
+
+	@{
+		Content.PrependDefinition(re =>
+		{
+			re.Tab("Content", "Content");
+			re.PublishedRange().Container("Metadata");
+		});
+	 }
+	@if (IsSectionDefined("head")) { @RenderSection("head") }
+</head>
+<body class="clearfix">
+    <div id="pageWrapper">
+        <div class="navbar">
+            <div class="container">
+                <div class="navbar-header clearfix">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="mobile-logo" href="#"></a>
+                    
+                </div>
+                <a class="desktop-logo" href="#"></a>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav bs-docs-nav">
+                    @foreach (var x in Content.Traverse.StartPage.Children)
+                    {
+                        var cssClass = "";
+                        var url = x.Url;
+                        if (x.Id == Content.Current.Item.Id)
+                        {
+                            cssClass += "active";
+                            url = "#";
+                        }
+                        if (x.ChildPages.Count > 0)
+                        {
+                            cssClass += "dropdown";
+                        }
+                        <li class="@cssClass">
+                            <a href="@x.Url">@x.Title</a>
+                            if (x.ChildPages.Count > 0)
+                            {
+                                <ul class="dropdown-menu">
+                                @foreach (var xx in x.ChildPages)
+                                {
+                                    cssClass = string.Empty;
+                                    if (xx.Id == Content.Current.Item.Id)
+                                    {
+                                        cssClass += "active";
+                                        url = "#";
+                                    }
+                                    <li class="@cssClass">
+                                        <a href="@xx.Url">@xx.Title</a>
+                                    </li>
+                                }
+                                </ul>
+                            }
+                        </li>
+                    }
+                    </ul>
+                    <!--
+                    <ul class="nav navbar-nav bs-docs-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>                               
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    -->
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container main-content">
+            @{ Html.ControlPanel().Render(); }
+            
+            @if (IsSectionDefined("page"))
+            {
+                @RenderSection("page")
+            }
+            else
+            {
+                <div class="row">
+                <div class="col-xs-12">
+                @{ Html.DroppableZone("Content").Render(); }
+                </div>
+                </div>
+            }
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- ============== Scripts =============== -->
+    @{ Html.Zone("Scripts").Render(); }
+    <script src="@Url.ThemedContent("~/js/jquery-1.10.2.min.js")"></script>
+    <script src="@Url.ThemedContent("~/js/bootstrap.min.js")"></script>
+    <script src="@Url.ThemedContent("~/js/mainscript.js")"></script>
+</body>
+</html>

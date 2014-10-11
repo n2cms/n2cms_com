@@ -1,0 +1,15 @@
+﻿@model Dinamico.Models.StartPage
+
+@section main {
+
+    <div class="jumbotron">
+        <div class="container">
+            @{ Html.DroppableZone("Hero").Render(); }
+        </div>
+    </div>
+
+    @Content.Render.Tokens("Text").Wrap(@<div class="row"><div class="col-xs-12">@item.RenderContents()</div></div>)
+
+    @{ Html.DroppableZone("BootstrapRows").Render(); }
+
+}
