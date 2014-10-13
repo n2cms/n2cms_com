@@ -43,28 +43,28 @@
                 <a class="desktop-logo" href="#"></a>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav bs-docs-nav">
-                    @foreach (var x in Content.Traverse.StartPage.Children)
+                    @foreach (var x in N2.Content.Traverse.StartPage.Children.Where(ch => ch.IsPage))
                     {
                         var cssClass = "";
                         var url = x.Url;
-                        if (x.Id == Content.Current.Item.Id)
+                        if (x.ID == N2.Content.Current.Item.ID)
                         {
                             cssClass += "active";
                             url = "#";
                         }
-                        if (x.ChildPages.Count > 0)
-                        {
+						if (x.Children.Where(ch => ch.IsPage).Any())
+						{
                             cssClass += "dropdown";
                         }
                         <li class="@cssClass">
                             <a href="@x.Url">@x.Title</a>
-                            if (x.ChildPages.Count > 0)
+                            @if (x.Children.Where(ch => ch.IsPage).Any())
                             {
                                 <ul class="dropdown-menu">
-                                @foreach (var xx in x.ChildPages)
+                                @foreach (var xx in x.Children.Where(ch => ch.IsPage))
                                 {
                                     cssClass = string.Empty;
-                                    if (xx.Id == Content.Current.Item.Id)
+                                    if (xx.ID == N2.Content.Current.Item.ID)
                                     {
                                         cssClass += "active";
                                         url = "#";
@@ -113,6 +113,9 @@
                 <div class="row">
                 <div class="col-xs-12">
                 @{ Html.DroppableZone("Content").Render(); }
+
+					@RenderBody()
+
                 </div>
                 </div>
             }
