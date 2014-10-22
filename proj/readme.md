@@ -163,9 +163,10 @@ Design portfolio
 * http://ifrei.iese.edu
 * http://www.iqgroup.es
 * http://www.greenlivingprojects.com
+* http://www.salasserveis.com
 * http://www.socialtrendsinstitute.org
 * http://www.barnahouse.com
-* http://www.pushroom.com (this is a system of mine)
+* http://www.pushroom.com
 * http://www.sibilare.com
 
 
